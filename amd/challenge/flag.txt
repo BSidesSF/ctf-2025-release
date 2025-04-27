@@ -1,0 +1,1 @@
+CTF{zen_and_the_art_of_bad_crypto}

@@ -1,0 +1,60 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Center container */
+.container {
+    text-align: center;
+}
+
+/* Classified section styling */
+.classified {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 30px; /* Increased padding for better spacing */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Headings */
+.classified h2 {
+    color: #ff4500; /* Bright orange for emphasis */
+    margin-bottom: 20px; /* Add spacing below heading */
+}
+
+/* Details section */
+.details p {
+    margin: 10px 0; /* Add spacing between paragraphs */
+}
+
+/* Countermeasures section */
+.countermeasures p {
+    margin: 5px 0; /* Add slight spacing between countermeasure items */
+}
+
+/* Remove bullets (if using lists in the future) */
+ul, ol {
+    list-style-type: none; /* Removes bullets or numbers */
+    padding-left: 0; /* Removes default padding */
+}
+
+/* Button styling */
+button {
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff6347; /* Slightly lighter orange on hover */
+}

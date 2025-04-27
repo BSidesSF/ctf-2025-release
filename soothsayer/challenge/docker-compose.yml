@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    user: "2000"
+    # volumes:
+    #   - .:/app # Bind mount for development

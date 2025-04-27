@@ -1,0 +1,84 @@
+html,
+body {
+  height: 100%;
+}
+
+.home-body {
+	background-color: #ecf0f1;
+  padding: 100;
+}
+
+
+.btn-block{
+	display: block;
+	margin-top: 10px;
+	padding: 10px;
+	width: 100%;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  color: #1a0933;
+  text-shadow: none;
+}
+
+.container {
+    max-width: 960px;
+    display:flex;
+    justify-content:flex-start;
+}
+
+.reveal-button{
+  margin:10px;
+}
+
+.card-game {
+  width: 1000px;
+  height: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  justify-content: flex-start;
+  flex: 1; /* Allow card-game to grow */
+}
+
+.dragon-card {
+  width: calc(25% - 10px);
+  height: calc(30% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  cursor: pointer;
+}
+
+.dragon-card.flip {
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+}
+
+.dragon-card .front-face,
+.dragon-card .back-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.dragon-card .front-face {
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+}
+
+.zoomed-image {
+  width: 4800px;
+  height: 7200px;
+  padding:10px;
+}

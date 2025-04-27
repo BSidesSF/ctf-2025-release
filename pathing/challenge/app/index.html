@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path Traversal Exploitation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        main {
+            max-width: 800px;
+            margin: auto;
+            padding: 2em;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Exploiting Path Traversal Vulnerabilities</h1>
+        <p>Path traversal attacks involve manipulating URLs to access unauthorized files. Believe it or not, THIS VERY SITE is vulnerable!</p>
+
+        <p>All you have to do it access it by visiting: <span id="domain"><a href="/../../../../../../../../">../../../../../../../../flag.txt</a></span><p>
+
+        <p>The twist is, your browser won't let you, so you'll have to find another way!</p>
+    </main>
+</body>
+
+<script>
+  document.getElementById('domain').innerHTML = `<a href="${ window.location }../../../../../../../../flag.txt">${ window.location }../../../../../../../../flag.txt</a>`;
+</script>
+</html>

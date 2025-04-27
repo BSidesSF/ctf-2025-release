@@ -1,0 +1,30 @@
+# This is the standard metadata for a challenge with a web component.
+# In terms of file structure, please also have the following:
+#
+# - A challenge/ folder with everything needed to create the challenge assets
+# - A distfiles/ folder which contains all files (or symlinks to files) that
+#   will be attached to the challenge
+# - A solution/ folder with a working solution to the challenge (or a README.md
+#   file documenting the solution)
+
+version: 'beta1'
+name: 'hoard'
+author: 'ron'
+flag: 'CTF{a-dragons-hoard-is-all-he-has-dont-take-it-away}'
+description: |
+  Can you raid the dragon's hoard??
+value: 1000 # Leave this as 1000 unless you have a reason to change it
+tags:
+  - 'Pwn'
+  - 'Web'
+  - '101'
+# This *must* be the port on which your service is listening inside the
+# container.  It *must* also return 200 for a GET / HTTP/1.1.
+port: 80
+protocol: 'http' # accepted: http, https, tcp, udp
+flag_path: '/flag.txt' # Optional; but helpful for players
+replicas: 1 # Don't run replicas (note: remove this if a single instance is okay)
+# This isn't really running as root, it's using the nginx container and runs as
+# nginx
+security:
+  allow_run_as_root: true

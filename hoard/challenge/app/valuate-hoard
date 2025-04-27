@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Check if exactly three arguments are provided
+if [ "$#" -ne 3 ]; then
+    echo "Usage: $0 num1 num2 num3"
+    exit 1
+fi
+
+# Read the arguments
+num1=$1
+num2=$2
+num3=$3
+
+# Perform some math (e.g., calculate the average)
+result=$(echo "($num1 + $num2 + $num3) / 3")
+
+# Output the result
+echo $result

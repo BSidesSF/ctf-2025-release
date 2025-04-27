@@ -1,0 +1,70 @@
+/* General Styles */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff00;
+    background: url('background.jpg') no-repeat center center fixed; /* Mysterious background */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black box */
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ff00; /* Glowing effect */
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #ff0000; /* Red for urgency */
+    text-shadow: 0 0 10px #ff0000; /* Glowing red text */
+}
+
+p {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.dragons {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px dashed #00ff00; /* Dossier-like dashed border */
+    border-radius: 5px;
+}
+
+input[type="file"] {
+    display: block;
+    margin: 15px auto;
+    padding: 10px;
+    font-size: 1em;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 15px auto;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #000000;
+    background-color: #00ff00; /* Neon green button */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff0000; /* Red hover effect for danger */
+}
+
+.fire {
+    color: #ffcc00; /* Golden yellow for emphasis */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body class="home-body">
+    <h1> Hangman One</h1>
+    <p class="msg">Try to guess the word of the day.<p>
+            <p class="life-lost">Lives Lost: {{ life_lost }} of 4.</p>
+            {% if msg != "" %}
+            <div class="outcome alert alert-info">
+                <strong> {{msg}} </strong>
+            </div>
+            {% endif %}
+            <div id="hangman-container">
+                <img id="hangman-image" src="{{ url_for('static', filename='images/' + stageImg)}}" alt="Hangman Image" />
+                <div id="hangman-guesses"></div>
+            </div>
+            <div id="hangman-display">
+                <div class="letter-container">
+                    <div class="ctf"> CTF{ </div>
+                </div>
+                {% for letter in letters %}
+                <div class="letter-container">
+                    <div class="letter" data-id="{{ loop.index }}" data-value="{{ letter }}">{{letter}}</div>
+                    <div class="underline"></div>
+                </div>
+                {% endfor %}
+                <div class="letter-container">
+                    <div class="ctf">}</div>
+                </div>
+            </div>
+            <div class="alphabet-grid">
+                {% for alphabet in alphabets %}
+                <button class="alphabet" data-id="{{ alphabet }}" data-value="{{ alphabet }}" {% if alphabet in letters_guessed %}disabled{% endif %}> {{alphabet}} </button>
+                {% endfor %}
+            </div>
+            <a href="/logout" class="btn btn-secondary btn-large btn-block"> Logout </a>
+            <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+</body>
+
+</html>

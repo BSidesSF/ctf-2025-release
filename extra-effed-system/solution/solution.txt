@@ -1,0 +1,25 @@
+Filesystem badly corrupted. flag.jpg won't read.
+
+Two options for solving. Run xfs_repair and then mount.
+
+Or read and reconstruct file manually:
+
+$ xfs_db -c 'path /flag.jpg' -c 'print' -f exefs.bin | tail
+Metadata corruption detected at 0x55e1eca39940, inode 0xbf dinode
+v3.inumber = 191
+v3.uuid = 13634fd9-6b0d-4ddf-bf0c-74695282f6a6
+v3.reflink = 0
+v3.cowextsz = 0
+v3.dax = 0
+v3.bigtime = 1
+v3.nrext64 = 1
+u3.bmx[0-1] = [startoff,startblock,blockcount,extentflag]
+0:[0,104333,256,0]
+1:[256,119185,4576,0]
+
+dd if=exefs.bin bs=4k skip=104333 count=256 > /tmp/test.jpg; dd if=exefs.bin bs=4k skip=119185 count=4576 >> /tmp/test.jpg
+
+jpeg is also corrupted but the pixel stream can still be interpreted
+by most image software and the flag is visible.
+
+CTF{ticktock_upwarp}

@@ -1,0 +1,14 @@
+version: "3"
+services:
+  puppeteer-test:
+    build:
+      context: .
+    environment:
+      PORT: 3003
+    ports:
+      - 3003:3003
+    platform: linux/amd64
+    deploy:
+      resources:
+        limits:
+          memory: 4096M

@@ -1,0 +1,82 @@
+Across
+1	It broke up on Dec. 26, 1991 (abbr)	ussr
+5	____.exe - common proof of concept payload	calc
+9	Lead organizer of BSidesSF	reed
+13	An uncontrolled, abnormal growth of cells or tissues	neoplasia
+15	Online sales	etail
+17	Cubs' protector (infested by: one attracked to light)	denmother
+18	One driving a U-haul	hauler
+20	Mexican mama bear	osa
+21	Discarded part of a banana	peel
+22	Massive ERP software platform	sap
+23	Game with a dreaded "Draw 4" card	uno
+24	Consume food	eat
+25	Former Google motto (infested by: one who serves their queen)	dontbeevil
+28	Mown strips	swaths
+32	It's good for absolutely nothing, in an old song	war
+33	Type of mathematical wave	sine
+34	Mom's sister	aunt
+36	Make an offer on eBay	bid
+38	Modern digital credential: ____ key	pass
+39	Toss the football perfectly (infested by: one who gets stingy)	throwaspiral
+42	Noted security researcher Orange ____	tsai
+44	___ Tac Toe	tic
+45	____ Connery or ____ Astin	sean
+46	You learn many ways to do this to an array in an Algorithms class	sort
+47	Computer component that comes in 8gb, 16gb, and other common sizes (abbr.)	ram
+49	Twitches	spasms
+53	Like some modern movements (double infested by: one who haults 10x their own weight, and an annoying parasite)	antipolice
+57	Linux utility to read a file	cat
+58	Small river	ria
+59	Function to convert a negative number to a positive one	abs
+60	503, in Ancient Rome	diii
+63	Type of firmware update (abbr.)	ota
+64	Writer in a monestary	scribe
+66	The reward you get for finding and reporting what's in the circled letters (also the flag)	bugbounty
+68	Having lotsa soap bubbles	sudsy
+69	Herbal supplement used as a cold remedy	echinacea
+70	Highschool exams with a max score of 1600	sats
+71	They're required for Kerberos or to enter BSides (abbr)	tkts
+72	CISSP, for example (abbr.)	cert
+
+Down
+1	Presses ctrl-z	undoes
+2	It goes up and down	seesaw
+3	Piece of classical music	sonata
+4	Filetype commonly installed on Fedora, Rocky Linux, and others (abbr.)	rpm
+5	____ Blanchett	cate
+6	Tapped, like a cigarette	ashed
+7	Keep one's head down	lielow
+8	Part of a train (or a four-wheeled alternative to one!)	car
+9	Exercise to get back into shape after an injury	rehab
+10	Stage, in French	etape
+11	Water, in French	eau
+12	Related to a flood, especially the biblical flood	diluvial
+14	Hack off	lop
+16	_____'_ Tomb (Moscow landmark)	lenins
+19	They're given to accounts, in an RBAC system	roles
+22	Removes paint (or clothes!)	strips
+26	Catches, like a criminal on the street	nabs
+27	Spain, in Spanish	espana
+29	Polynesian paradise	tahiti
+30	Ben ___	hur
+31	Spoiled brat	snot
+35	Spins, like a baton	twirls
+37	Runs out of batteries	dies
+39	Section of Hades (both the game and the underworld)	tartarus
+40	Type of berry	acai
+41	Freestyle	rap
+42	Bygone Russian rulers	tsars
+43	Bygone Seattle basketball team, casually	sonics
+48	Donald's uncle, Scrooge ______	mcduck
+50	It holds a torch (or sometimes treasure, in certain videogames)	sconce
+51	"Inertia is a property of ______" --Bill Nye themesong	matter
+52	Spend the night in, like a hotel	stayat
+54	_____ Blue Ribbon	pabst
+55	Does what one's told	obeys
+56	Number of bits in a byte	eight
+61	Sacred bird of Egyptian mythology		ibis
+62	Charged particle	ion
+65	Interactive reverse engineering tool before Ghidra	ida
+66	Place a wager	bet
+67	Windows' "Do you want to allow this app to make changes to your device?" dialog, for short	uac

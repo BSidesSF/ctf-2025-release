@@ -1,0 +1,35 @@
+$ ./md5_brent
+Hit cycle power limit 1, doubling
+Hit cycle power limit 2, doubling
+Hit cycle power limit 4, doubling
+Hit cycle power limit 8, doubling
+Hit cycle power limit 16, doubling
+Hit cycle power limit 32, doubling
+Hit cycle power limit 64, doubling
+Hit cycle power limit 128, doubling
+Hit cycle power limit 256, doubling
+Hit cycle power limit 512, doubling
+Hit cycle power limit 1024, doubling
+Hit cycle power limit 2048, doubling
+Hit cycle power limit 4096, doubling
+Hit cycle power limit 8192, doubling
+Hit cycle power limit 16384, doubling
+Hit cycle power limit 32768, doubling
+Hit cycle power limit 65536, doubling
+Hit cycle power limit 131072, doubling
+Hit cycle power limit 262144, doubling
+Hit cycle power limit 524288, doubling
+Hit cycle power limit 1048576, doubling
+Hit cycle power limit 2097152, doubling
+Hit cycle power limit 4194304, doubling
+Hit cycle power limit 8388608, doubling
+Hit cycle power limit 16777216, doubling
+Hit cycle power limit 33554432, doubling
+Hit cycle power limit 67108864, doubling
+Hit cycle power limit 134217728, doubling
+Hit cycle power limit 268435456, doubling
+Hit cycle power limit 536870912, doubling
+Hit cycle power limit 1073741824, doubling
+Hit cycle power limit 2147483648, doubling
+Found cycle of length 3385752161 (tort == hare == 0eb8d7716b9566cf)
+Found cycle of length 3385752161 starting at 1016321515

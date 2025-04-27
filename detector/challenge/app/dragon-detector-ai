@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# FLAG: CTF{tharr-be-draggggons}
+
+# This doesn't actually do anything..... shhhh, they paid us a lot for us to
+# call this AI
+random_number=$(( $RANDOM % 100 ))
+
+# Check if the random number is less than 10 (10% chance)
+if [ $random_number -lt 10 ]; then
+    echo "DRAGON DETECTED @ $1! 🐉"
+else
+    echo "No dragons @ $1, just internet hamsters. 🐹"
+fi

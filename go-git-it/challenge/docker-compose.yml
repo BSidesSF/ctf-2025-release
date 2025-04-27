@@ -1,0 +1,10 @@
+services:
+  web-vcs:
+    build:
+      context: .
+      args:
+        FLAG: "CTF{g0tt4_g!t_th4t}"
+    deploy:
+      replicas: 1
+    ports:
+      - "80:80"

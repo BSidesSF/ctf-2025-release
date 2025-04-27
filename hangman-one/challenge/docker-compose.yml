@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Assuming the Dockerfile is named "Dockerfile"
+    ports:
+      - "8000:8000"
+    user: "2000"
+    volumes:
+      - .:/app # Bind mount, so changes to code are reflected in the container.

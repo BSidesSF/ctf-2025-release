@@ -1,0 +1,24 @@
+# This is the standard metadata for a challenge with a server-side component.
+# In terms of file structure, please also have the following:
+#
+# - A challenge/ folder with everything needed to create the challenge assets
+# - A distfiles/ folder which contains all files (or symlinks to files) that
+#   will be attached to the challenge
+# - A solution/ folder with a working solution to the challenge (or a README.md
+#   file documenting the solution)
+
+version: 'beta1'
+name: 'bug-me'
+author: 'ron'
+flag: 'CTF{hope-you-enjoyed-this-one}'
+description: |
+  A dragon has hidden his treasure and won't tell us where until we solve his puzzle! Can you untangle this binary and get the flag?
+
+  *Note: This is supposed to be hard! We've provided a terminal for your convenience but you don't need to use it*
+value: 1000 # Leave this as 1000 unless you have a reason to change it
+tags:
+  - 'RE'
+
+port: 4445
+protocol: 'tcp'
+use_podperconn: true

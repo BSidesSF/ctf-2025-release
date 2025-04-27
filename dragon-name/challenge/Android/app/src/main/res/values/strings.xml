@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Dragon Names</string>
+    <string name="welcome_text">What\'s your dragon name?</string>
+    <string name="button_text">Retry</string>
+    <string-array name="dragon_array">
+        <item>smaug</item>
+        <item>igneel</item>
+        <item>charizard</item>
+        <item>saphira</item>
+        <item>haku</item>
+        <item>mushu</item>
+    </string-array>
+
+    <string name="part4">Fa1ry</string>
+</resources>

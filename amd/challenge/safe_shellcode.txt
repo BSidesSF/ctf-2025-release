@@ -1,0 +1,7 @@
+0000000000001159 <testfunc>:
+    1159:       f3 0f 1e fa             endbr64
+    115d:       55                      push   %rbp
+    115e:       48 89 e5                mov    %rsp,%rbp
+    1161:       90                      nop
+    1162:       5d                      pop    %rbp
+    1163:       c3                      ret

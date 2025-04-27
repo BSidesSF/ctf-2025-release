@@ -1,0 +1,5 @@
+genkey
+first
+last
+true
+exit

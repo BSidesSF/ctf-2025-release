@@ -1,0 +1,26 @@
+# This is the standard metadata for a challenge with a web component.
+# In terms of file structure, please also have the following:
+#
+# - A challenge/ folder with everything needed to create the challenge assets
+# - A distfiles/ folder which contains all files (or symlinks to files) that
+#   will be attached to the challenge
+# - A solution/ folder with a working solution to the challenge (or a README.md
+#   file documenting the solution)
+
+version: "beta1"
+name: "go-git-it"
+author: "anshc"
+flag: "CTF{g0tt4_g!t_th4t}"
+description: |
+  You didn't commit anything sensitive, right?
+value: 1000 # Leave this as 1000 unless you have a reason to change it
+tags:
+  - "Web"
+# This *must* be the port on which your service is listening inside the
+# container.  It *must* also return 200 for a GET / HTTP/1.1.
+port: 80
+protocol: "http" # accepted: http, https, tcp, udp
+# This isn't really running as root, it's using the nginx container and runs as
+# nginx
+security:
+  allow_run_as_root: true
