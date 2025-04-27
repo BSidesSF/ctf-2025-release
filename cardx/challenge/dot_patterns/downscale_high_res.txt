@@ -1,0 +1,7 @@
+# downscale filters
+
+bmenrigh@omicron ~/projects/github/ctf-2025/challenges/cardx/challenge/server/static/images $ !19439
+magick high-res-0.webp -evaluate Pow 0.75 -blur 4x2 -resize 1200x1800 -modulate 103,120,100 back.png
+
+bmenrigh@omicron ~/projects/github/ctf-2025/challenges/cardx/challenge/server/static/images $ !19440
+magick back.png -quality 90 back.webp

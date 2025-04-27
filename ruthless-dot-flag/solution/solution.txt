@@ -1,0 +1,52 @@
+The r16 file format is a proprietary(?) format used by the "Tom
+Clancy's ruthless.com" developed by Red Storm Entertainment and
+released in 1998.
+
+The format is pretty simple, with an 18 byte header, and then each
+pixel is encoded into 16 bits (a short) as 5 bits of color for each
+channel and 1 bit of alpha. The bit order is arrrrrgggggbbbbb but the
+shorts are stored in little-endian so they actually go in as
+gggbbbbbarrrrrgg.
+
+The first flag is simply written in the image:
+
+Flag1: CTF{oldie_but_goodie}
+
+This can be seen many ways. Loading up the image as a 16 bit little
+endian image in an image editor like GIMP will reveal the text well
+enough despite the exact color details not being correct.
+
+Another option is to grab a copy of the game
+(https://www.myabandonware.com/game/tom-clancy-s-ruthless-com-diu) and
+then to replace an existing game asset like Splash.r16 and the game
+will display the image to you.
+
+The provided r16_to_ppm.py converts the r16 format to a PPM (Netpbm
+image) which can be converted to a PNG with pamtopng or imagemagick.
+
+
+The second flag is encoded in the image's alpha channel. A field in
+the header is set to no alpha so the game ignores the alpha bits.
+
+Here is the header:
+
+$ hexdump -vC ../distfiles/flags.r16 | head
+00000000  03 20 02 58 00 00 01 00  01 00 00 00 00 00 00 00  |. .X............|
+00000010  00 00 31 f3 31 73 31 77  31 77 31 f7 31 77 31 77  |..1.1s1w1w1.1w1w|
+
+The first short 0x0320 is the image width in big-endian (800).
+The second short 0x0258 is the height in big-endian (600).
+
+The third short 0x0000 is no alpha (a value of 0x0200 appears to mean
+use alpha). A value of 0x0100 also seems to work and also mean no alpha.
+
+The fourth and fith shorts are 0x0100 (256) and their meaning is unknown (to me).
+
+The remaining 8 bytes (4 shorts) are zero and may just be padding(?).
+
+
+The second flag is simply encoded 1 bit per pixel into the alpha
+bit. When all of the alpha bits are extracted the result is a PNG file
+with the second flag. r16_extract_hidden_data.py does the extraction.
+
+FLAG2: CTF{evilcorp_won}

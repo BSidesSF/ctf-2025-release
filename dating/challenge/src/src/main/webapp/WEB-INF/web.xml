@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <!-- Servlet Declaration -->
+    <servlet>
+        <servlet-name>ProfileServlet</servlet-name>
+        <servlet-class>com.example.dragon.ProfileServlet</servlet-class>
+    </servlet>
+
+    <!-- Welcome File -->
+    <welcome-file-list>
+        <welcome-file>dragon-form.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>

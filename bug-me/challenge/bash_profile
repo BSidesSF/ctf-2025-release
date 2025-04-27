@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Define colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+MAGENTA='\033[0;35m'
+CYAN='\033[0;36m'
+WHITE='\033[0;37m'
+RESET='\033[0m'
+
+echo -e "    ${RED}**********************************************************************${RESET}"
+echo -e "    ${RED}* ${YELLOW}WARNING: LABORATORY TESTS                                          ${RED}*${RESET}"
+echo -e "    ${RED}**********************************************************************${RESET}"
+echo -e "    ${RED}*${YELLOW} We're analyzing this binary obtained from the dragon. We think     ${RED}*${RESET}"
+echo -e "    ${RED}*${YELLOW} it wants a flag! Can you figure out what the flag is?              ${RED}*${RESET}"
+echo -e "    ${RED}**********************************************************************${RESET}"
+echo -e "${RESET}"
+echo
+echo -e "To use the tool, run ${CYAN}./bug-me \"<flag>\""
+echo -e 
+echo -e "${GREEN}CTF note: You don't need to use this terminal at all, it's just here for your convenience!${RESET}"

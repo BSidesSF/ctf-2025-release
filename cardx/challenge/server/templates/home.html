@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title> CardX </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<!-- Based on https://github.com/code-sketch/memory-game -->
+<body class="home-body">
+        <div class="col-lg-10 col-md-7 col-sm-6">
+            <h1> CardX </h1>
+            <p class="lead"> Welcome to the best dragon card validation service. </p>
+            <div class="card border-danger mb-3">
+                <div class="card-header"> Task </div>
+                <div class="card-body">
+                  <h4 class="card-title"> Authenticate Dragon Cards</h4>
+                  <p class="card-text"> An auction of rare prototype dragon cards just went up. A high profile collector is particularly interested in cards released before 1998. Can you figure out the authentic ones? </p>
+                  <p> Note: Priority would be for the oldest first.</p>
+                  <p> Click on the card to inspect </p>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary reveal-button">Reveal Cards</button>
+        </div>
+        <div class="container">
+        <div class="side-by-side-container">
+            <div class="zoomed-container">
+                <img id="zoomed-image" src="" alt="{{card}}" />
+            </div>
+            <section class="card-game">
+                {% for card in cards %}
+                    <div class="dragon-card" id="dragon-card-{{card}}">
+                        <img class="back-face" src="{{ url_for('static', filename='images/back.webp') }}" data-id="0" alt="{{card}}" />
+                        <img class="front-face" data-id="{{card}}" data-value="{{card}}" id="zoomable-image-{{card}}" src="{{ url_for('static', filename='images/' + card + '.webp') }}" alt="Dragon card" />
+                    </div>
+                {% endfor %}
+            </section>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/card.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Center content and limit width */
+main {
+    max-width: 800px; /* Limit width to 800px */
+    margin: 0 auto;   /* Center content horizontally */
+    padding: 20px;
+    background-color: #fff; /* Add a white background for contrast */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+header {
+    text-align: center;
+    background-color: #ff4500;
+    color: white;
+    padding: 20px 10px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.form-section, .result-section {
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type=text], input[type=number], input[type=color] {
+    width: calc(100% - 20px); /* Adjust width to fit inside container */
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+input[type="color"] {
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+input[type=range] {
+    width: calc(100% - 60px); /* Adjust width for range slider */
+}
+
+button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e63900;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+}

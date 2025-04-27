@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Define colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+MAGENTA='\033[0;35m'
+CYAN='\033[0;36m'
+WHITE='\033[0;37m'
+RESET='\033[0m'
+
+echo -e "    ${RED}**********************************************************************${RESET}"
+echo -e "    ${RED}* ${YELLOW}WARNING: RESTRICTED ACCESS FOR DRAGON HUNTERS ONLY                 ${RED}*${RESET}"
+echo -e "    ${RED}**********************************************************************${RESET}"
+echo -e "    ${RED}*${YELLOW} This terminal is for authorized dragon hunters only. Always.       ${RED}*${RESET}"
+echo -e "    ${RED}*${YELLOW} Unauthorized access is strictly prohibited and penalized severely. ${RED}*${RESET}"
+echo -e "    ${RED}*${YELLOW} Being hunted by dragons is a possible consequence of misuse.       ${RED}*${RESET}"
+echo -e "    ${RED}*${YELLOW} Access is restricted to dragon hunters with valid credentials.     ${RED}*${RESET}"
+echo -e "    ${RED}*${YELLOW} You are entering a highly restricted and monitored system now.     ${RED}*${RESET}"
+echo -e "    ${RED}*${YELLOW} All activities will be recorded and reviewed regularly.            ${RED}*${RESET}"
+echo -e "    ${RED}*${YELLOW} Proceed with caution.                                              ${RED}*${RESET}"
+echo -e "    ${RED}**********************************************************************${RESET}"
+echo -e "${RESET}"
+echo -e "${CYAN}drago-daction${RESET} is a tool developed by our founder to help censor dragon"
+echo -e "content from the news. It's helped keep our mission under wraps for over 100 years."
+echo
+echo -e "To use the tool, run ${CYAN}./drago-daction <filename>${RESET}"
+echo -e 
+echo -e "You'll be prompted for what to find (ie, \"${CYAN}dragon${RESET}\")"
+echo
+echo -e "Then you'll be prompted for what to change it to (ie, \"${CYAN}rabbit${RESET}\")"
+echo
+echo -e "${RED}Caution: ${RESET}This edits the file, so when doing this PROCess,"
+echo -e "reMEMber to back up the file first!"
+echo
+echo -e "Example:"
+echo -e "  \$ ${CYAN}cp dragon-report.txt.bak dragon-report.txt${RESET}"
+echo -e "  \$ ${CYAN}./drago-daction-demo ./dragon-report.txt${RESET}"
+echo
+echo -e "${GREEN}CTF note 1: drago-daction-demo is for playing with, whereas drago-daction is SetUID and can access /flag.txt.${RESET}"
+echo
+echo -e "${GREEN}CTF note 2: you don't need to (and cannnn't) overwrite /flag.txt.${RESET}"
+
+# Files can be opened by anybody
+umask 0000

@@ -1,0 +1,16 @@
+<html>
+
+<head>
+    <title> CardX </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<!-- Based on https://github.com/code-sketch/memory-game -->
+<body class="home-body">
+    <div id="zoomed-container">
+        <img src="{{ url_for('static', filename='images/' + imageSrc)}}" id="zoomed-image"/>
+    </div>
+    <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+</body>
+
+</html>

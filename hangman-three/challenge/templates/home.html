@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body class="home-body">
+    <h1> Hangman Three</h1>
+    <p class="msg">Try to guess the word of the day.<p>
+            <p class="life-lost">Lives Lost: {{ life_lost }} of 4.</p>
+            {% if msg != "" %}
+            <div class="outcome alert alert-info">
+                <strong> {{msg}} </strong>
+            </div>
+            {% endif %}
+            {% if flag != "" %}
+            <div class="flag outcome alert alert-info">
+                <strong> The flag is: {{flag}} </strong>
+            </div>
+            {% endif %}
+            <div id="hangman-container">
+                <img id="hangman-image" src="{{ url_for('static', filename='images/' + stageImg)}}" alt="Hangman Image" />
+                <div id="hangman-guesses"></div>
+            </div>
+            <div id="hangman-display">
+                {% for letter in letters %}
+                <div class="letter-container">
+                    <div class="letter" data-id="{{ loop.index }}" data-value="{{ letter }}">{{letter}}</div>
+                    <div class="underline"></div>
+                </div>
+                {% endfor %}
+            </div>
+            </div>
+            <div class="alphabet-grid">
+                <form id="guessForm" action="/guess" method="post">
+                    {{ form.csrf_token }}
+                    <input type="hidden" name="letter" id="guessedLetter">
+                    {% for alphabet in alphabets %}
+                    <button class="alphabet" data-id="{{ alphabet }}" data-value="{{ alphabet }}" {% if alphabet in letters_guessed %}disabled{% endif %}> {{alphabet}} </button>
+                    {% endfor %}
+                </form>
+            </div>
+            <a href="/logout" class="btn btn-secondary btn-large btn-block"> Logout </a>
+            <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+</body>
+
+</html>

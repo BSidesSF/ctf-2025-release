@@ -1,0 +1,14 @@
+bmenrigh@omicron ~/projects/github/ctf-2025/challenges/arrow_of_time $ magick -verbose atomic_clock_source.jpg -background none -extent 1400x1200 -matte -virtual-pixel transparent -distort perspective '637,354 605,353  633,462 605,483 868,315 908,353 854,412 908,483' corrected.png
+atomic_clock_source.jpg WEBP 1024x682 1024x682+0+0 8-bit sRGB 44204B 0.000u 0:00.005
+magick: option has been replaced '-matte', use "-alpha Set" at CLI arg 7 @ warning/operation.c/CLISimpleOperatorImage/2825.
+Perspective Projection:
+  -distort PerspectiveProjection \
+      '0.496983, -0.164835, 126.676, -0.0159031,
+       0.61892, 15.612, -0.000394669, -0.000317496'
+Perspective Distort, FX Equivalent:
+  -fx 'ii=i+page.x+0.5; jj=j+page.y+0.5;
+       rr=+0.000817511*ii +0.000730707*jj + 1;
+       xx=(+2.04569*ii +0.408614*jj -265.519)/rr;
+       yy=(+0.0319423*ii +1.79354*jj -32.047)/rr;
+       rr>0 ? p{xx-page.x-0.5,yy-page.y-0.5} : blue' \
+atomic_clock_source.jpg=>corrected.png WEBP 1024x682=>1400x1200 1400x1200+0+0 8-bit sRGB 44204B 0.380u 0:00.319

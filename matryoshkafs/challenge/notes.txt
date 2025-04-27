@@ -1,0 +1,81 @@
+01: reiserfs 3.6
+
+02: amiga ffs
+(venv) bmenrigh@omicron ~/projects/github/ctf-2025/challenges/matryoshkafs/challenge/tools $ xdftool -v ../layers/layer_02.amiga_affs.hdf create size=10M + format affs ffs
+
+03: cramfs little endian
+
+04: hfs (not plus)
+
+05: gpt partitions + minux v1
+
+06: squashfs with zstd
+
+07: hpfs + msdos
+Must first manually partition image or else mkhpfs tool
+segfault/errors. Partition must be exact multiple of 8MB (16384
+sectors) or else the FS that gets made is invalid and linux will
+corrupt it while writing.
+
+08: iso9660
+
+09: udf
+
+10: SGI partitions + f2fs with lz4 compression
+# trick to making SGI partitions with buggy fdisk https://wiki.gentoo.org/wiki/Handbook:MIPS/Blocks/Disks/en
+# mkfs.f2fs -l F2FS -O extra_attr,inode_checksum,sb_checksum,compression /dev/loop0p1
+mount -o compress_algorithm=lz4 [...]
+
+
+11: sun partitions + nilfs2
+# same partition trick needed as SGI to write correct sun table
+mkfs.nilfs2 -L NILFS2 -B 16 /dev/loop0p2
+
+12: exfat
+
+13: ntfs
+
+14: jfs
+
+15: btrfs
+
+16: xfs with 8192 byte sectors
+
+Support for sectors larger than the page size is brand new in XFS and
+still too new to be used in linux (as of 6.13) because the block layer
+doesn't support sectors larger than the page size yet. Trying to mount
+results in:
+
+[ 3713.182037] XFS (loop0): Cannot set_blocksize to 8192 on device loop0
+
+Trying to specify the size manually in losetup yields:
+
+[ 3770.884597] Invalid logical block size (8192)
+
+So to make the filesystem and populate it at the same time:
+$ mkfs.xfs -s size=8192 -b size=8192 -p file=xfs_proto -f layer_16.xfs
+meta-data=layer_16.xfs           isize=512    agcount=4, agsize=16384 blks
+         =                       sectsz=8192  attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=1, rmapbt=1
+         =                       reflink=1    bigtime=1 inobtcount=1 nrext64=1
+         =                       exchange=0
+data     =                       bsize=8192   blocks=65536, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=8192   ascii-ci=0, ftype=1, parent=0
+log      =internal log           bsize=8192   blocks=8192, version=2
+         =                       sectsz=8192  sunit=1 blks, lazy-count=1
+realtime =none                   extsz=8192   blocks=0, rtextents=0
+
+$ cat xfs_proto
+/stand/diskboot
+4872 110
+d--777 3 1
+fs.xz      ---444 3 1 layer_15.btrfs.xz
+$
+
+
+17: ext4
+
+18: hfsplus
+
+19: msdos part + fat16

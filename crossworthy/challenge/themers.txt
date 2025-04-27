@@ -1,0 +1,148 @@
+
+ant
+---
+advantage
+advantaged
+advantageous
+advantages
+aromantic
+aromantics
+atlanticcity
+avantgarde
+banthebomb
+blackpanther
+byzantine
+cantaloup
+cantankerous
+cantbebeat
+cantdoathing
+cantunsee
+chloranthy
+coagulants
+constants
+dearsanta
+debutante
+debutantes
+debutants
+decanting
+dismantle
+dismantled
+dismantler
+dismantles
+eggplants *
+elephantseal
+exfoliants
+faceplanting
+fantasied
+fantasies
+fantasize
+fantasized
+fantasizes
+fantasque
+fantasydraft
+fantasynovel
+fantasysport
+finalfantasy
+gayanthem
+giantsquid
+grantmoney
+hairimplants
+hantavirus
+hantaviruses
+humantorch *
+icantakeit
+imeanthat
+imeantosay
+imeantthat
+immigrants
+iwantalawyer
+iwantcandy
+jackolantern
+lycanthropes
+lycanthropia
+lycanthropic
+mantarays
+misanthropes
+misanthropia
+misanthropic
+miscreants
+pecantree
+pecantrees
+pettytyrants
+warranted
+wecantlose
+yogapants
+youcantwin
+
+bee
+---
+allbeefpatty *
+bottleofbeer
+coldbeers
+cornedbeef
+craftbeers
+dontbeevil *
+flightofbeer
+gingerbeer
+grainfedbeef
+grassfedbeef
+hadabeefwith
+holdmybeer *
+ivebeenhad
+showerbeer *
+wannabees
+
+wasp
+---
+drawaspade *
+grewaspine *
+growaspine *
+throwaspiral *
+
+moth
+---
+behemoths
+chemotherapy
+denmother *
+denmothers *
+dragmother *
+mammothtusks
+smotheration
+smothered
+smotherer
+smotherers
+smotheriness
+smothering
+smotheringly
+stagemothers
+
+worm
+---
+earthwormjim
+
+mantis
+---
+zoomantist
+
+lice
+---
+cheeseslices
+delicense
+doglicense
+gamelicenses
+gunlicense
+maliceful
+presliced
+preslices
+prolicense
+publiceye *
+slicedmeat
+sliceofbread
+splicedgenes
+antipolice **
+
+louse
+---
+calloused
+callouses
+jealousex *

@@ -1,0 +1,26 @@
+# This is the standard metadata for a challenge with a web component.
+# In terms of file structure, please also have the following:
+#
+# - A challenge/ folder with everything needed to create the challenge assets
+# - A distfiles/ folder which contains all files (or symlinks to files) that
+#   will be attached to the challenge
+# - A solution/ folder with a working solution to the challenge (or a README.md
+#   file documenting the solution)
+
+version: 'beta1'
+name: 'moa-station'
+author: 'mandatory'
+flag: 'CTF{TRUST_BUT_VER1FY}'
+description: |
+  The Ministry of Arstotzka is now accepting online visas, please submit the URL of your visa file for our agents to review. Glory to Arstotzka!
+value: 1000 # Leave this as 1000 unless you have a reason to change it
+tags:
+  - 'Web'
+# This *must* be the port on which your service is listening inside the
+# container.  It *must* also return 200 for a GET / HTTP/1.1.
+port: 3003
+protocol: 'http' # accepted: http, https, tcp, udp
+#flag_path: '/path/to/ctf/flag.txt' # Optional; but helpful for players
+notes: |
+  See README, should be straightforward to deploy.
+replicas: 10

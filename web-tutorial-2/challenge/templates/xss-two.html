@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BSidesSF CTF 2025</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</head>
+
+<body>
+    <div class="layout">
+        <nav class="header navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+            <div class="container-fluid">
+                <span class="navbar-brand">Web Tutorial 2</span>
+            </div>
+        </nav>
+        <main class="main">
+            <div class="container">
+                <div class="content">
+                    <img src="{{ url_for('static', filename='img/banner.png') }}" class="banner-img" />
+                    <h3 class="h3-title">Can you steal the flag?</h3>
+                    <button class="home-btn btn btn-primary hint" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        Hint 1
+                    </button>
+                    <button class="home-btn btn btn-primary hint" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        Hint 2
+                    </button>
+                    </p>
+                    <div class="collapse" id="collapse1">
+                        <div class="card card-body">
+                            You'll need an XSS payload that will bypass the following CSP,
+                            <pre>
+                              <code>
+                                default-src 'self'; 
+                                script-src 'self' '*.us-central1.run.app';
+                                connect-src *; 
+                                style-src-elem 'self' fonts.googleapis.com fonts.gstatic.com; 
+                                font-src 'self' fonts.gstatic.com fonts.googleapis.com
+                              </code>
+                            </pre>
+                        </div>
+                    </div>
+                    <div class="collapse" id="collapse2">
+                        <div class="card card-body">
+                            Can you use us-central1.run.app to host Javascripts? 
+                        </div>
+                    </div>
+                    <h5>Try to read /xss-two-flag as admin, all payloads submitted here will be sent to the admin.</h5>
+                    <form action="/xss-two-result" method="post">
+                        <div class="form-group">
+                             <textarea class="form-control" id="payload" name="payload" rows="10" cols="60" placeholder="Enter your payload..."></textarea>
+                        </div><br />
+                        <button type="submit" class="home-btn btn btn-primary submit" value="submit">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

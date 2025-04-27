@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<CROSSFIRE>
+    <VERSION>1</VERSION>
+    <TITLE/>
+    <AUTHOR/>
+    <COPYRIGHT/>
+    <GRID width="16">
+USSR.CALC.REED..
+NEOPLASIA.ETAIL.
+DENMOTHER.HAULER
+OSA.PEEL.SAP.UNO
+EAT...DONTBEEVIL
+SWATHS.WAR..SINE
+...AUNT.BID.PASS
+..THROWASPIRAL..
+TSAI.TIC.SEAN...
+SORT..RAM.SPASMS
+ANTIPOLICE...CAT
+RIA.ABS.DIII.OTA
+SCRIBE.BUGBOUNTY
+.SUDSY.ECHINACEA
+..SATS.TKTS.CERT
+</GRID>
+    <CIRCLES>35,36,37,38,74,75,76,118,119,120,121,160,161,162,166,167,168,169</CIRCLES>
+    <WORDS>
+        <WORD dir="ACROSS" id="0" isTheme="false" num="1">It broke up on Dec. 26, 1991 (abbr)</WORD>
+        <WORD dir="ACROSS" id="1" isTheme="false" num="5">____.exe - common proof of concept payload</WORD>
+        <WORD dir="ACROSS" id="2" isTheme="false" num="9">Lead organizer of BSides SF</WORD>
+        <WORD dir="ACROSS" id="3" isTheme="false" num="13">An uncontrolled, abnormal growth of cells or tissues</WORD>
+        <WORD dir="ACROSS" id="4" isTheme="false" num="15">Online sales</WORD>
+        <WORD dir="ACROSS" id="5" isTheme="true" num="17">Cubs' protector (infested by: one attracked to light)</WORD>
+        <WORD dir="ACROSS" id="6" isTheme="false" num="18">One driving a U-haul</WORD>
+        <WORD dir="ACROSS" id="7" isTheme="false" num="20">Mexican mama bear</WORD>
+        <WORD dir="ACROSS" id="8" isTheme="false" num="21">Discarded part of a banana</WORD>
+        <WORD dir="ACROSS" id="9" isTheme="false" num="22">Massive ERP software platform</WORD>
+        <WORD dir="ACROSS" id="10" isTheme="false" num="23">Game with a dreaded "Draw 4" card</WORD>
+        <WORD dir="ACROSS" id="11" isTheme="false" num="24">Consume food</WORD>
+        <WORD dir="ACROSS" id="12" isTheme="true" num="25">Former Google motto (infested by: one who serves their queen)</WORD>
+        <WORD dir="ACROSS" id="13" isTheme="false" num="28">Mown strips</WORD>
+        <WORD dir="ACROSS" id="14" isTheme="false" num="32">It's good for absolutely nothing, in an old song</WORD>
+        <WORD dir="ACROSS" id="15" isTheme="false" num="33">Type of mathematical wave</WORD>
+        <WORD dir="ACROSS" id="16" isTheme="false" num="34">Mom's sister</WORD>
+        <WORD dir="ACROSS" id="17" isTheme="false" num="36">Make an offer on eBay</WORD>
+        <WORD dir="ACROSS" id="18" isTheme="false" num="38">Modern digital credential: ____ key</WORD>
+        <WORD dir="ACROSS" id="19" isTheme="true" num="39">Toss the football perfectly (infested by: one who gets stingy)</WORD>
+        <WORD dir="ACROSS" id="20" isTheme="false" num="42">Noted security researcher Orange ____</WORD>
+        <WORD dir="ACROSS" id="21" isTheme="false" num="44">___ Tac Toe</WORD>
+        <WORD dir="ACROSS" id="22" isTheme="false" num="45">____ Connery or ____ Astin</WORD>
+        <WORD dir="ACROSS" id="23" isTheme="false" num="46">You learn many ways to do this to an array in an Algorithms class</WORD>
+        <WORD dir="ACROSS" id="24" isTheme="false" num="47">Computer component that comes in 8gb, 16gb, and other common sizes (abbr.)</WORD>
+        <WORD dir="ACROSS" id="25" isTheme="false" num="49">Twitches</WORD>
+        <WORD dir="ACROSS" id="26" isTheme="true" num="53">Like some modern movements (double infested by: one who haults 10x their own weight, and an annoying parasite)</WORD>
+        <WORD dir="ACROSS" id="27" isTheme="false" num="57">Linux utility to read a file</WORD>
+        <WORD dir="ACROSS" id="28" isTheme="false" num="58">Small river</WORD>
+        <WORD dir="ACROSS" id="29" isTheme="false" num="59">Function to convert a negative number to a positive one</WORD>
+        <WORD dir="ACROSS" id="30" isTheme="false" num="60">503, in Ancient Rome</WORD>
+        <WORD dir="ACROSS" id="31" isTheme="false" num="63">Type of firmware update (abbr.)</WORD>
+        <WORD dir="ACROSS" id="32" isTheme="false" num="64">Writer in a monestary</WORD>
+        <WORD dir="ACROSS" id="33" isTheme="true" num="66">The reward you get for finding and reporting what's in the circled letters (also the flag)</WORD>
+        <WORD dir="ACROSS" id="34" isTheme="false" num="68">Having lotsa soap bubbles</WORD>
+        <WORD dir="ACROSS" id="35" isTheme="false" num="69">Herbal supplement used as a cold remedy</WORD>
+        <WORD dir="ACROSS" id="36" isTheme="false" num="70">Highschool exams with a max score of 1600</WORD>
+        <WORD dir="ACROSS" id="37" isTheme="false" num="71">They're required for Kerberos or to enter BSides (abbr)</WORD>
+        <WORD dir="ACROSS" id="38" isTheme="false" num="72">CISSP, for example (abbr.)</WORD>
+        <WORD dir="DOWN" id="39" isTheme="false" num="1">Presses ctrl-z</WORD>
+        <WORD dir="DOWN" id="41" isTheme="false" num="2">It goes up and down</WORD>
+        <WORD dir="DOWN" id="43" isTheme="false" num="3">Piece of classical music</WORD>
+        <WORD dir="DOWN" id="45" isTheme="false" num="4">Filetype commonly installed on Fedora, Rocky Linux, and others (abbr.)</WORD>
+        <WORD dir="DOWN" id="51" isTheme="false" num="5">____ Blanchett</WORD>
+        <WORD dir="DOWN" id="54" isTheme="false" num="6">Tapped, like a cigarette</WORD>
+        <WORD dir="DOWN" id="56" isTheme="false" num="7">Keep one's head down</WORD>
+        <WORD dir="DOWN" id="59" isTheme="false" num="8">Part of a train (or a four-wheeled alternative to one!)</WORD>
+        <WORD dir="DOWN" id="64" isTheme="false" num="9">Exercise to get back into shape after an injury</WORD>
+        <WORD dir="DOWN" id="67" isTheme="false" num="10">Stage, in French</WORD>
+        <WORD dir="DOWN" id="70" isTheme="false" num="11">Water, in French</WORD>
+        <WORD dir="DOWN" id="73" isTheme="false" num="12">Biblical adjective for the great flood</WORD>
+        <WORD dir="DOWN" id="48" isTheme="false" num="14">Hack off</WORD>
+        <WORD dir="DOWN" id="75" isTheme="false" num="16">_____'_ Tomb (Moscow landmark)</WORD>
+        <WORD dir="DOWN" id="77" isTheme="false" num="19">They're given to accounts, in an RBAC system</WORD>
+        <WORD dir="DOWN" id="62" isTheme="false" num="22">Removes paint (or clothes!)</WORD>
+        <WORD dir="DOWN" id="60" isTheme="false" num="26">Catches, like a criminal on the street</WORD>
+        <WORD dir="DOWN" id="71" isTheme="false" num="27">Spain, in Spanish</WORD>
+        <WORD dir="DOWN" id="46" isTheme="false" num="29">Polynesian paradise</WORD>
+        <WORD dir="DOWN" id="49" isTheme="false" num="30">Ben ___</WORD>
+        <WORD dir="DOWN" id="52" isTheme="false" num="31">Spoiled brat</WORD>
+        <WORD dir="DOWN" id="55" isTheme="false" num="35">Spins, like a baton</WORD>
+        <WORD dir="DOWN" id="65" isTheme="false" num="37">Runs out of batteries</WORD>
+        <WORD dir="DOWN" id="44" isTheme="false" num="39">Section of Hades (both the game and the underworld)</WORD>
+        <WORD dir="DOWN" id="57" isTheme="false" num="40">Type of berry</WORD>
+        <WORD dir="DOWN" id="68" isTheme="false" num="41">Freestyle</WORD>
+        <WORD dir="DOWN" id="40" isTheme="false" num="42">Bygone Russian rulers</WORD>
+        <WORD dir="DOWN" id="42" isTheme="false" num="43">Bygone Seattle basketball team, casually</WORD>
+        <WORD dir="DOWN" id="61" isTheme="false" num="48">Donald's uncle, Scrooge ______</WORD>
+        <WORD dir="DOWN" id="74" isTheme="false" num="50">It holds a torch (or sometimes treasure, in certain videogames)</WORD>
+        <WORD dir="DOWN" id="76" isTheme="false" num="51">"Inertia is a property of ______"</WORD>
+        <WORD dir="DOWN" id="78" isTheme="false" num="52">Spend the night in, like a hotel</WORD>
+        <WORD dir="DOWN" id="50" isTheme="false" num="54">_____ Blue Ribbon</WORD>
+        <WORD dir="DOWN" id="53" isTheme="false" num="55">Does what one's told</WORD>
+        <WORD dir="DOWN" id="63" isTheme="false" num="56">Number of bits in a byte</WORD>
+        <WORD dir="DOWN" id="66" isTheme="false" num="61">Sacred bird of Egyptian mythology	</WORD>
+        <WORD dir="DOWN" id="69" isTheme="false" num="62">Charged particle</WORD>
+        <WORD dir="DOWN" id="47" isTheme="false" num="65">Interactive reverse engineering tool before Ghidra</WORD>
+        <WORD dir="DOWN" id="58" isTheme="false" num="66">Place a wager</WORD>
+        <WORD dir="DOWN" id="72" isTheme="false" num="67">Windows' "Do you want to allow this app to make changes to your device?" dialog, for short</WORD>
+    </WORDS>
+    <NOTES/>
+</CROSSFIRE>

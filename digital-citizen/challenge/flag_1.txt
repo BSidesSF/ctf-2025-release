@@ -1,0 +1,1 @@
+CTF{never_trust_a_black_box}

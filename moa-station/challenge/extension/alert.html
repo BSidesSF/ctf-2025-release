@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('font.ttf') format('truetype');
+        }
+
+        html,
+        body {
+            font-family: 'CustomFont', sans-serif;
+            font-size: 36px;
+            color: #656064;
+            background-color: #474646;
+            height: 100%;
+            margin: 0;
+            /* Remove default margins */
+            display: flex;
+            justify-content: center;
+            /* Horizontal centering */
+            align-items: center;
+            /* Vertical centering */
+        }
+
+        .highlight {
+            background-color: yellow;
+            color: red;
+            font-weight: bold;
+        }
+
+        .citation {
+            background-color: #F5DCE9;
+            width: 1080px;
+            height: 480px;
+            padding: 10px;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            border-color: #C6B1B1;
+            /* border-image: repeating-linear-gradient(90deg, gray 0%, gray 10px, transparent 10px, transparent 20px) 1 stretch; */
+            border-style: dashed;
+            /* background-color: white; */
+        }
+        hr {
+            border-style: dashed;
+            border-top: 2px dashed transparent;
+            border-color: #C6B1B1;
+        }
+    </style>
+</head>
+
+<body style="width: 800px; border: 0px; padding: 0px">
+    <div class="citation"></div>
+    <script src="jquery.js"></script>
+    <script src="alert.js"></script>
+</body>
+
+</html>

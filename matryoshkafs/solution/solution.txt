@@ -1,0 +1,144 @@
+16610  2025-03-10T04:13:13 cd matryoshkafs/
+16611  2025-03-10T04:13:13 ls
+16612  2025-03-10T04:13:15 file fs
+16613  2025-03-10T04:13:26 xzcat fs > 1.bin
+16614  2025-03-10T04:13:28 rm fs
+16615  2025-03-10T04:13:31 file 1.bin
+16616  2025-03-10T04:13:48 sudo losetup /dev/loop0 1.bin
+16617  2025-03-10T04:13:57 mkdir tmp_mnt
+16618  2025-03-10T04:14:06 sudo partprobe /dev/loop0
+16619  2025-03-10T04:14:13 sudo mount /dev/loop0p1 tmp_mnt/
+16620  2025-03-10T04:14:16 file tmp_mnt/fs.xz
+16621  2025-03-10T04:14:25 xzcat tmp_mnt/fs.xz > 2.bin
+16622  2025-03-10T04:14:28 sudo umount tmp_mnt
+16623  2025-03-10T04:14:37 sudo losetup -d
+16624  2025-03-10T04:14:40 sudo losetup -d /dev/loop0
+16625  2025-03-10T04:14:42 file 2.bin
+16626  2025-03-10T04:14:50 sudo mount -o loop 2.bin tmp_mnt/
+16627  2025-03-10T04:15:07 sudo xzcat tmp_mnt/fs.xz > 3.bin
+16628  2025-03-10T04:15:14 sudo umount tmp_mnt
+16629  2025-03-10T04:15:17 file 3.bin
+16630  2025-03-10T04:15:28 sudo mount -o loop 3.bin tmp_mnt/
+16631  2025-03-10T04:15:37 xzcat tmp_mnt/fs.xz > 4.bin
+16632  2025-03-10T04:15:42 sudo umount tmp_mnt
+16633  2025-03-10T04:15:43 file 4.bin
+16634  2025-03-10T04:16:12 xfs_db -f 4.bin
+16635  2025-03-10T04:17:19 dd if=4.bin bs=8192 skip=45753 count=3156 | xz -d > 5.bin
+16636  2025-03-10T04:17:26 file 5.bin
+16637  2025-03-10T04:17:38 sudo mount -o loop 5.bin tmp_mnt/
+16638  2025-03-10T04:17:49 xzcat tmp_mnt/fs.xz > 6.bin
+16639  2025-03-10T04:17:51 sudo umount tmp_mnt
+16640  2025-03-10T04:17:56 file 6.bin
+16641  2025-03-10T04:18:09 sudo mount -o loop 6.bin tmp_mnt/
+16642  2025-03-10T04:18:36 xzcat tmp_mnt/fs.xz > 7.bin
+16643  2025-03-10T04:18:39 sudo umount tmp_mnt
+16644  2025-03-10T04:18:40 file 7.bin
+16645  2025-03-10T04:18:52 mmls 7.bin
+16646  2025-03-10T04:19:11 sudo losetup /dev/loop0 7.bin
+16647  2025-03-10T04:19:17 sudo partprobe /dev/loop0
+16648  2025-03-10T04:19:46 sudo fdisk -l /dev/loop0
+16649  2025-03-10T04:20:08 sudo mount /dev/loop0 tmp_mnt/
+16650  2025-03-10T04:20:17 xzcat tmp_mnt/fs.xz > 8.bin
+16651  2025-03-10T04:20:22 sudo umount tmp_mnt
+16652  2025-03-10T04:20:26 file 8.bin
+16653  2025-03-10T04:20:34 mmls 8.bin
+16654  2025-03-10T04:20:41 sudo losetup -d /dev/loop0
+16655  2025-03-10T04:20:53 sudo losetup /dev/loop0 8.bin
+16656  2025-03-10T04:21:00 sudo fdisk -l /dev/loop0
+16657  2025-03-10T04:21:16 sudo mount /dev/loop0 tmp_mnt/
+16658  2025-03-10T04:21:23 xzcat tmp_mnt/fs.xz > 9.bin
+16659  2025-03-10T04:21:27 sudo umount tmp_mnt
+16660  2025-03-10T04:21:29 file 9.bin
+16661  2025-03-10T04:21:35 hexdump -vC 9.bin | less
+16662  2025-03-10T04:22:04 strigs -a 9.bin | less
+16663  2025-03-10T04:22:08 strings -a 9.bin | less
+16664  2025-03-10T04:22:29 sudo mount -o loop 9.bin tmp_mnt/
+16665  2025-03-10T04:22:51 sudo mount -o loop -t hfs 9.bin tmp_mnt/
+16666  2025-03-10T04:23:14 sudo losetup -d /dev/loop0
+16667  2025-03-10T04:23:31 sudo losetup /dev/loop0 9.bin
+16668  2025-03-10T04:23:35 sudo partprobe /dev/loop0
+16669  2025-03-10T04:23:59 sudo mount /dev/loop0p1 tmp_mnt/
+16670  2025-03-10T04:24:05 sudo mount /dev/loop0p2 tmp_mnt/
+16671  2025-03-10T04:24:37 hexdump -vC /dev/loop0p2 | less
+16672  2025-03-10T04:24:40 sudo hexdump -vC /dev/loop0p2 | less
+16673  2025-03-10T04:24:54 sudo strings -a /dev/loop0p2 | head
+16674  2025-03-10T04:25:08 xzcat tmp_mnt/fs.xz > 10.bin
+16675  2025-03-10T04:25:12 sudo umount tmp_mnt
+16676  2025-03-10T04:25:14 file 10.bin
+16677  2025-03-10T04:25:22 sudo losetup -d /dev/loop0
+16678  2025-03-10T04:25:28 sudo losetup /dev/loop0 10.bin
+16679  2025-03-10T04:25:38 sudo partprobe /dev/loop0
+16680  2025-03-10T04:25:52 sudo mount /dev/loop0p1 tmp_mnt/
+16682  2025-03-10T04:26:12 file tmp_mnt/fs
+16683  2025-03-10T04:26:25 cp tmp_mnt/fs 11.bin
+16684  2025-03-10T04:26:30 sudo umount tmp_mnt
+16685  2025-03-10T04:26:36 mmls 11.bin
+16686  2025-03-10T04:26:59 sudo mount -o loop 11.bin tmp_mnt/
+16687  2025-03-10T04:27:07 xzcat tmp_mnt/fs.xz > 12.bin
+16688  2025-03-10T04:27:10 sudo umount tmp_mnt
+16689  2025-03-10T04:27:17 sudo losetup -d /dev/loop0
+16690  2025-03-10T04:27:20 file 12.bin
+16691  2025-03-10T04:27:29 sudo mount -o loop 12.bin tmp_mnt/
+16692  2025-03-10T04:27:39 file tmp_mnt/fs
+16693  2025-03-10T04:27:47 cp tmp_mnt/fs 13.bin
+16694  2025-03-10T04:27:49 sudo umount tmp_mnt
+16695  2025-03-10T04:28:44 sudo losetup -o $((512 * 2048)) /dev/loop0 13.bin
+16696  2025-03-10T04:28:50 sudo mount /dev/loop0 tmp_mnt/
+16697  2025-03-10T04:29:00 file tmp_mnt/fs
+16698  2025-03-10T04:29:06 cp tmp_mnt/fs 14.bin
+16699  2025-03-10T04:29:11 sudo umount tmp_mnt
+16700  2025-03-10T04:29:14 sudo losetup -d /dev/loop0
+16701  2025-03-10T04:29:24 sudo mount -o loop 14.bin tmp_mnt/
+16702  2025-03-10T04:29:30 file tmp_mnt/fs
+16703  2025-03-10T04:29:37 cp tmp_mnt/fs 15.bin
+16704  2025-03-10T04:29:40 sudo umount tmp_mnt
+16705  2025-03-10T04:29:57 mmls 15.bin
+16706  2025-03-10T04:30:15 sudo losetup -o $((512 * 2048)) /dev/loop0 15.bin
+16707  2025-03-10T04:30:20 sudo mount /dev/loop0 tmp_mnt/
+16708  2025-03-10T04:30:25 file tmp_mnt/fs
+16709  2025-03-10T04:30:33 cp tmp_mnt/fs 16.bin
+16710  2025-03-10T04:30:36 sudo losetup -d /dev/loop0
+16711  2025-03-10T04:30:44 mount -o loop 16.bin tmp_mnt/
+16712  2025-03-10T04:31:00 sudo mount -o loop 16.bin tmp_mnt/
+16713  2025-03-10T04:31:04 file tmp_mnt/fs
+16714  2025-03-10T04:31:11 cp tmp_mnt/fs 17.bin
+16715  2025-03-10T04:31:14 sudo umount tmp_mnt
+16717  2025-03-10T04:31:23 hexdump -vC 17.bin | less
+16718  2025-03-10T04:34:14 hexdump -vC 17.bin | less
+16719  2025-03-10T04:34:27 strings -a 17.bin | head
+16720  2025-03-10T04:34:35 sudo mount -o loop 17.bin tmp_mnt/
+16721  2025-03-10T04:34:44 cp tmp_mnt/fs 18.bin
+16722  2025-03-10T04:34:45 file 18.bin
+16723  2025-03-10T04:34:54 sudo umount tmp_mnt
+16724  2025-03-10T04:35:07 sudo mount -o loop 18.bin tmp_mnt/
+16725  2025-03-10T04:35:19 sudo mount -o loop -t ffs 18.bin tmp_mnt/
+16726  2025-03-10T04:35:28 sudo losetup -d /dev/loop0
+16727  2025-03-10T04:35:38 sudo mount -o loop -t affs 18.bin tmp_mnt/
+16728  2025-03-10T04:35:57 xzcat tmp_mnt/fs.xz > 19.bin
+16729  2025-03-10T04:36:00 sudo umount tmp_mnt
+16730  2025-03-10T04:36:04 file 19.bin
+16745  2025-03-10T04:39:31 sudo mount -o loop 19.bin tmp_mnt/
+16746  2025-03-10T04:39:40 cp tmp_mnt/flag.heic .
+
+
+bmenrigh@omicron ~/tmp/matryoshkafs $ sha256sum *
+9fdec4cb067a0d3ece66a993f1636dc247f79dce594bfc8d4f09eb1a8a711c53  1.bin
+ef86d11bf557ac5e4fd0e933316d4848f670cc142760d5f57757abb9be643727  10.bin
+c65f291715049e52d4186172ad366d64d5d07faa35a3a556734f84f1f7ea9c68  11.bin
+501b404cbb85861e3af08cbb905395c4772668484432741cf0fd3e7fd59ed7cc  12.bin
+6a42c91bd90fe750d50b541800a3a7e8a9fa322cd751bb7d3634510c12dde7e3  13.bin
+472600793d2f6a56a54190289e61c32161204b326d0ff83d46663d0bc53e36df  14.bin
+3528baafe2a725aa3b0a0b42612c7e7a6e4996863f8f082352f9901526b69f33  15.bin
+563c671bcc1420f31dc36228d417e1b1cba5bc2d8b75da5661f7ce8cc9c0c43e  16.bin
+d8ce2eea6f3cc665472cf89925449e8e539b6ddb2994ef441e872b8fc7496926  17.bin
+076ce5859798239a13dabef0a935124fdf02595f0edac075f8834e59a6e21d98  18.bin
+c588a581fe86ea7d5f62390494585ff03c19c530ee042fa594b5e922af48c2c3  19.bin
+3ecae9d0e58dd89c6d7793feb71998e6917d7d3ca058d43a9d0031101deada40  2.bin
+72723ddb897041bda3a26eb278b8f63e1c36d957d7038b7cf031c9713cc37457  3.bin
+5203ecaa7ca8b2195c41766de94253f84f39e5df44066f9a7310b79a00cb8693  4.bin
+778b8828de7f7375eb437b65122c0985968dadc4fe20994f7a84a1adb4f4bea6  5.bin
+31eaf725fb82c764b3fc8729ddcf8341727347ad22db17e9458ad4184d6ecba1  6.bin
+c37c128b416968df79cd5af01e12ac5a022b1ea49ecb5fdde16762246ba1795a  7.bin
+186361fdf2354bf35105e2f6cb01d7f6122ca3dab62ca5588491285492975014  8.bin
+8eec76858731d7e3519d9840c1632634b6f0b22c2521b034c48de8022a0d8fbf  9.bin
+03b403d39fde731c06f3b43a1709dd9d2ee6fb4cd76a6c6ac408059621dd316e  flag.heic

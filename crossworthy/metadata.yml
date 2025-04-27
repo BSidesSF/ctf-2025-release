@@ -1,0 +1,9 @@
+version: 'beta1'
+name: 'crossworthy'
+author: 'ron'
+flag: 'CTF{bugbounty}'
+description: |
+  Solve the crossword in the program (or attached as PDF/HTML files)! The flag is 66 across (surrounded by `CTF{...}`)
+value: 1000
+tags:
+  - 'Misc'

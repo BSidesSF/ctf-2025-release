@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Dating Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🔥 Dragon Dating Site 🔥</h1>
+        <p>Find your perfect fire-breathing match!</p>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Create Your Dragon Profile</h2>
+            <form id="dragonProfile" onsubmit="return submitForm(event)">
+                <fieldset>
+                    <legend>Essentials</legend>
+                    <label for="name">Dragon Name:</label>
+                    <input type="text" id="name" required><br>
+
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" min="100" required><br>
+
+                    <label for="flameColor">Flame Color:</label>
+                    <input type="color" id="flameColor" value="#ff4500">
+                    <span id="flameColorValue">#ff4500</span>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Characteristics</legend>
+                    <label for="wingspan">Wingspan (meters):</label>
+                    <input type="range" id="wingspan" min="10" max="100" value="50"
+                           oninput="document.getElementById('wingspanValue').textContent = this.value">
+                    <span id="wingspanValue">50</span> m<br>
+
+                    <label for="treasure">Treasure Hoard Value (gold coins):</label>
+                    <input type="number" id="treasure" step="1000"><br>
+                </fieldset>
+
+                <button type="submit">Submit Profile</button>
+            </form>
+        </section>
+
+        <section class="result-section">
+            <h2>Submission Result</h2>
+            <div id="result"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dragon Dating Site. All rights reserved.</p>
+    </footer>
+
+<script src="https://unpkg.com/pure-md5@latest/lib/index.js"></script>
+<script>
+document.getElementById('flameColor').addEventListener('input', function () {
+    document.getElementById('flameColorValue').textContent = this.value;
+});
+
+function submitForm(event) {
+    // Gather form data
+    const dragonData = {
+        name: document.getElementById('name').value,
+        age: document.getElementById('age').value || 100,
+        flameColor: document.getElementById('flameColor').value,
+        wingspan: document.getElementById('wingspan').value || 50,
+        treasure: document.getElementById('treasure').value || 1000,
+    };
+
+  console.log(dragonData);
+
+    // Convert data to XML
+    const xmlData = `
+        <java version="1.8.0" class="java.beans.XMLDecoder">
+            <object class="java.util.HashMap">
+                <void method="put">
+                    <string>name</string>
+                    <string>${dragonData.name}</string>
+                </void>
+                <void method="put">
+                    <string>age</string>
+                    <int>${dragonData.age}</int>
+                </void>
+                <void method="put">
+                    <string>flameColor</string>
+                    <string>${dragonData.flameColor}</string>
+                </void>
+                <void method="put">
+                    <string>wingspan</string>
+                    <int>${dragonData.wingspan}</int>
+                </void>
+                <void method="put">
+                    <string>treasure</string>
+                    <int>${dragonData.treasure}</int>
+                </void>
+            </object>
+        </java>
+    `;
+
+    // Send XML via XHR
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "/ProfileServlet");
+    xhr.setRequestHeader("Content-Type", "application/xml");
+    
+    xhr.onload = () => {
+        // Display the result in the result section
+        document.getElementById('result').innerHTML = `<p>Your profile has been submitted! Your reference ID is: ${md5(xhr.responseText)}</p>`;
+    };
+    
+    xhr.onerror = () => {
+        document.getElementById('result').innerHTML = `<p style='color: red;'>Error submitting profile!</p>`;
+    };
+
+
+    xhr.send(xmlData);
+
+    return false;
+}
+</script>
+</body>
+</html>

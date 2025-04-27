@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Ministry of Admission to Arstotzka Security Extension",
+  "version": "1.0",
+  "description": "Glory to Arstotzka!",
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://accounts.google.com; object-src 'self'; style-src 'unsafe-inline'",
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "48": "icon.png"
+  }
+}
